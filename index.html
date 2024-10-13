@@ -12,10 +12,11 @@
             padding: 0;
             background-color: #f0f2f5;
             color: #333;
+            scroll-behavior: smooth;
         }
 
         header {
-            background-color: #222;
+            background-color: #1a1a1a;
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -37,7 +38,6 @@
             background-color: #333;
             padding: 10px;
             text-align: center;
-            animation: slideDown 1s ease;
         }
 
         nav a {
@@ -47,28 +47,29 @@
             font-weight: bold;
         }
 
+        nav a:hover {
+            color: #ffa500; /* Orange highlight on hover */
+        }
+
         section {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .about {
-            text-align: center;
             padding: 50px 20px;
-            background-color: white;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease;
+            text-align: center;
+            font-size: 1.5rem;
         }
 
-        .about h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
+        #about {
+            background-color: #87cefa; /* Light blue */
+            color: white;
         }
 
-        .about p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+        #projects {
+            background-color: #ffa07a; /* Light coral */
+            color: white;
+        }
+
+        #contact {
+            background-color: #20b2aa; /* Light sea green */
+            color: white;
         }
 
         .projects {
@@ -111,10 +112,8 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #222;
+            background-color: #1a1a1a;
             color: white;
-            margin-top: 50px;
-            animation: fadeIn 2s ease;
         }
 
         /* Animations */
@@ -139,16 +138,6 @@
                 transform: translateY(0);
             }
         }
-
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-
-            to {
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 
@@ -165,13 +154,9 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="about" class="about">
+    <section id="about">
         <h2>About Me</h2>
-        <p>
-            Hi, I'm Yuki, a developer with a passion for AI, machine learning, and modern tech solutions. My experience
-            spans across various domains from web development to AI-driven applications. I enjoy solving complex
-            problems and building innovative solutions that make an impact.
-        </p>
+        <p>This is the placeholder text for the About Me section.</p>
     </section>
 
     <section id="projects">
@@ -200,7 +185,12 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>This is the placeholder text for the Contact section.</p>
+    </section>
+
+    <footer>
         <p>Contact me at: your.email@example.com</p>
     </footer>
 
