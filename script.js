@@ -1,10 +1,12 @@
-// Contact Form Submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+// Smooth scroll for navigation links
+const navLinks = document.querySelectorAll('nav ul li a');
 
-    // Display a simple alert for demonstration
-    alert('Thank you for your message!');
-
-    // Reset the form fields
-    this.reset();
+navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
